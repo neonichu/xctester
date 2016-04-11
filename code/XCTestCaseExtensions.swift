@@ -86,7 +86,7 @@ public func XCTestRunAll() -> Bool {
         let suites = (testRun.test as! XCTestSuite).tests
 
         for suite in suites {
-            let testCaseName = suite.name
+            let testCaseName = suite.name!
             print(testCaseName + "\n")
 
             for test in (suite as! XCTestSuite).tests {
