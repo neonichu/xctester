@@ -1,7 +1,7 @@
 import Foundation
 import ObjectiveC
 
-@asmname("objc_msgSend") func sendPerformSelector(_:NSObject, _:Selector, _:Selector) -> AnyObject!;
+@_silgen_name("objc_msgSend") func sendPerformSelector(_:NSObject, _:Selector, _:Selector) -> AnyObject!;
 
 let msgSend_block : @convention(block) (sself: NSObject, aSelector: Selector) -> AnyObject! = { (sself, aSelector) -> (AnyObject!) in
     return sendPerformSelector(sself, "performSelector:", aSelector)
